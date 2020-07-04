@@ -1,0 +1,39 @@
+<% var css_list = []%>
+<% var js_list=[]%>
+<%- include('../partial/header',{css:css_list, js:js_list}) %>
+<%- include('../partial/navbar',{user:user}) %>
+<div class="wrapper" style="margin-top:56px">
+	<%- include('../partial/sidebar', {active:"", parent:"panel", user:user}) %>
+	<div id="content" class="container-fluid">
+		<div id="background-content">
+			<h1>Process transaction - <span id="now_date"></span></h1>
+            <p>
+				This product has been selected to be purchased by the customer.
+				Please validate this transaction!
+			</p>
+			<table id="my_table">
+				<tr>
+				  <th>Product</th>
+				  <th>Price</th>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<%- include('../partial/javascript'); %>
+
+<script>
+
+	var row =  <%- JSON.stringify(products) %>;
+	var d = new Date();
+	$('#now_date').html(d)
+
+	forEach(let row in array) {
+		$('#my_table').append(`<tr>
+			  <td>${row.inventory_name}</td>
+			  <td>${row.inventory_price}</td>
+		  </tr>`);
+	  }
+
+</script>

@@ -1,0 +1,8 @@
+{
+    "list":[
+        {"id":1, "name":"Scan QR"},
+        {"id":2, "name":"Transaction"},
+        {"id":3, "name":"Inventory"},
+        {"id":4, "name":"Privacy & Policy"}
+    ]
+}

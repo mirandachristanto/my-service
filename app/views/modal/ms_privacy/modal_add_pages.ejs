@@ -1,0 +1,55 @@
+<!-- Modal ADD -->
+<div class="modal fade" id="addList" tabindex="-1" role="dialog" aria-labelledby="addModalTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="addModalTitle">Privacy & Policy - Add</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form id="formAddList" action="/panels/privacy_policy/save" method="post">
+					<div class="form-group">
+						<label for="type">Name: </label>
+						<input type="text" class="form-control" name="name" placeholder="Name" required />
+					</div>
+					<div class="form-group">
+						<label>Type: </label>
+						<select class="form-control" name="type" id="type_sel" onchange="showType()" required>
+							<option value="" selected disabled hidden>Choose here</option>
+							<option value="raw">Raw</option>
+							<option value="html">HTML</option>
+						</select>
+					</div>
+					<div class="form-group" id="raw_add" style="display:none;width:100%">
+						<label for="rawContent">Content: </label>
+						<textarea class="form-control" rows="10" placeholder="Content" name="content" id="rawContent" required></textarea>
+					</div>
+					<div class="form-group" id="html_add" style="display:none">
+						<label>Content: </label>
+						<textarea placeholder="Content" name="content" id="privacyContent"></textarea>
+					</div>
+					<div class="modal-footer">						
+						<button id="buttonAddList" type="submit" class="btn btn-primary">Save</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+<script>
+
+	function show_doc(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$('#prev_add_doc').attr('src', e.target.result)
+			};
+
+			reader.readAsDataURL(input.files[0]);
+		}
+	}
+
+</script>
