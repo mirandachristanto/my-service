@@ -1,0 +1,23 @@
+<nav class="navbar fixed-top navbar-light shadow-sm" style="background:#fff;height:56px">
+    <a id="sidebarCollapse" class="navbar-brand" style="color:#d99480;cursor:pointer;padding-top:0">
+        <i class="fas fa-bars align-middle" style="font-size:20px;width: 30px;"></i>
+        <img class="align-middle" src="/img/logo.png"
+            style="height:50px;margin-top:-5px;padding-bottom:1%">
+        <b class="align-middle" style="font-size:19px;width: 30px;"></b>
+    </a>
+    <form class="form-inline">
+        <div class="btn-group">
+            <button type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                style="color:#0BAEDD;background:none;border:none;">
+                <i class="fas fa-user-circle" style="font-size:32px;"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" style="box-shadow:3px 3px 10px -2px #555C;">
+                <span class="dropdown-item-text"><i style="color:#d49887"><%- user.username %></i></span>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/panel/faq">FAQ</a>
+                <a class="dropdown-item" href="/panels/change_password">Change Password</a>
+                <a class="dropdown-item" href="/panels/auth/logout">Log Out</a>
+            </div>
+        </div>
+    </form>
+</nav>

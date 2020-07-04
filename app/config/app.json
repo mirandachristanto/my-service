@@ -1,0 +1,4 @@
+{
+    "port": 3008,
+    "secret": "!my_service!"
+}

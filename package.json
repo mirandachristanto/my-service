@@ -1,0 +1,32 @@
+{
+  "name": "my_service.com",
+  "version": "1.0.0",
+  "description": "Template node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.19.0",
+    "compress-images": "^1.5.8",
+    "connect-redis": "^3.4.1",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "file-upload-with-preview": "^3.2.9",
+    "gifsicle": "^5.1.0",
+    "helmet": "^3.21.2",
+    "moment": "^2.24.0",
+    "multer": "^1.4.1",
+    "mysql2": "^1.6.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pngquant-bin": "^6.0.0"
+  }
+}
