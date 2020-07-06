@@ -1,0 +1,7 @@
+File from: [C:\Users\Miranda\my-service\public\upload\temp\product_1593848633.jpg]
+
+File to: [C:\Users\Miranda\my-service\public\upload\C:\Users\Miranda\my-service\public\upload\temp\product_1593848633.jpg]
+
+Compression algorithm: [-]
+
+Description: File does not exist!

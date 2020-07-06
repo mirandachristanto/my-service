@@ -1,0 +1,48 @@
+<nav id="sidebar">
+    <ul class="list-unstyled components">
+        <% if(user.role == 1){ %>
+        <li>
+            <a href="#admin_menu" data-toggle="collapse" aria-expanded="<%= (parent == 'admin') %>"
+                class="sidebar-item">
+                <i class="fas fa-lock"></i>&nbsp Admin menu<span class="float-right dropdown-toggle"></span>
+            </a>
+            <ul class="collapse list-unstyled <% if(parent == 'admin'){%>show<%}%>" id="admin_menu">
+                    <li class="<% if(active == 'ms_panel_users'){%>active<%}%>">
+                        <a class="sidebar-item " href="/panels/admin/ms_panel_users">Panel Users</a>
+                    </li>
+                    <li class="<% if(active == 'ms_panel_users_groups'){%>active<%}%>">
+                        <a class="sidebar-item " href="/panels/admin/ms_panel_users_groups">Panel Users Groups</a>
+                    </li>
+                    <li class="<% if(active == 'ms_panel_users_groups'){%>active<%}%>">
+                        <a class="sidebar-item " href="/panels/admin/ms_panel_users_groups">Our Merchant</a>
+                    </li>
+
+                </ul>
+            </li>
+        <% } %>
+        <li>
+            <a href=" #panel_page" data-toggle="collapse" aria-expanded="<%= (parent == 'panel') %>"
+                class="sidebar-item ">
+                <i class="fas fa-columns"></i>&nbsp Merchant<span class="float-right dropdown-toggle"></span>
+                </a>
+                <ul class="collapse list-unstyled <% if(parent == 'panel'){%>show<%}%>" id="panel_page">
+                <li class="<% if(active == 'ms_pages'){%>active<%}%>">
+                    <a class="sidebar-item " href="/panels/pages">Store info</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href=" #panel_all" data-toggle="collapse" aria-expanded="<%= (parent == 'panel') %>"
+               class="sidebar-item "><i class="fas fa-columns"></i>&nbsp Staff menu<span class="float-right dropdown-toggle"></span></a>
+            <ul class="collapse list-unstyled <% if(parent == 'panel'){%>show<%}%>" id="panel_all">
+                <li class="<% if(active == 'ms_panel_games'){%>active<%}%>">
+                    <a class="sidebar-item " href="/panels/ms_transaction">Transaction</a>
+                </li>
+                <li class="<% if(active == 'ms_panel_slider'){%>active<%}%>">
+                    <a class="sidebar-item " href="/panels/ms_inventory">Inventory List</a>
+                </li>
+                <li class="<% if(active == 'ms_panel_privacy'){%>active<%}%>">
+                    <a class="sidebar-item " href="/panels/privacy_policy">Privacy & Policy</a>
+                </li>
+    </ul>
+</nav>

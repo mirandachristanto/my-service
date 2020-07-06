@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  panel:
+    build: "./"
+    image: "${IMAGE_NAME}:${IMAGE_VERSION}"
+    env_file:
+     - .env
+    ports:
+      - "1302:3000"
+    restart: on-failure
+    environment:
+      #appconfig (APP_PORT Tidak Perlu Diganti)
+      APP_PORT: 3000 
+
+      #database config
+      DB_HOST: "localhost"
+      DB_PORT: "3306"
+      DB_USER: "root"
+      DB_PASS: "toor"
+      DATABASE: "my_service"
+      
+      #redis config
+      REDIS_HOST: "172.17.0.1"
+      REDIS_PORT: 6379
+      REDIS_PASS: ""

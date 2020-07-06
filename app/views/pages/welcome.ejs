@@ -1,0 +1,18 @@
+<% var css_list = []%>
+<% var js_list=[]%>
+<%- include('../partial/header',{css:css_list, js:js_list}) %>
+<%- include('../partial/navbar',{user:user}) %>
+<div class="wrapper" style="margin-top:56px">
+	<%- include('../partial/sidebar', {active:"", parent:"panel", user:user}) %>
+	<div id="content" class="container-fluid">
+		<div id="background-content">
+			<h1>Hi <%- user.username %>,</h1>
+            <p>
+                Welcome to <b>My Service</b> Panel.
+                Choose menu on side menu to continue.
+            </p>
+		</div>
+	</div>
+</div>
+
+<%- include('../partial/javascript'); %>

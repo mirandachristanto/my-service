@@ -1,0 +1,56 @@
+<!-- Modal update -->
+<div class="modal fade" id="updateList" tabindex="-1" role="dialog" aria-labelledby="updateModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateModalTitle">Privacy & Policy - Edit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="updateDocsForm">
+                    <input type="hidden" name="name" id="id1" />
+                    <div class="form-group">
+                            <label>Type: </label>
+                            <select class="form-control" name="type" id="type_update" required>
+                                <option value="" selected disabled hidden>Choose here</option>
+                                <option value="raw">Raw</option>
+                                <option value="html">HTML</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="raw_up" style="display:none;width:100%">
+                            <label for="rawContent1">Content: </label>
+                            <textarea class="form-control" rows="10" placeholder="Content" name="content" id="rawContent1" required></textarea>
+                        </div>
+                        <div class="form-group" id="html_up" style="display:none">
+                            <label>Content: </label>
+                            <textarea type="text" class="form-control" name="content" id="update_content" placeholder="Content"
+                                required ></textarea>
+                        </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="updateDocsButton" type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function load_doc(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#prev_update_doc')
+                    .attr('src', e.target.result)
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+</script>
