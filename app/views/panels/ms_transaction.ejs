@@ -19,7 +19,8 @@
 				</section>
 			</article>
 
-			<button id="stopped">Stop scanning</button>
+			<button id="start">Start scan</button>
+			<button id="stopped">Stop scan</button>
 			<button id="processed">Process transaction</button>
 
 			<hr>
@@ -70,13 +71,19 @@
 		codedetected = data
 	});
 
+	$("#started").click(function () {
+		scanStart(function (data){
+			codedetected = data
+		});	
+	})
+
 	$("#stopped").click(function () {
 		scanStop()		
 	})
 
 	$("#processed").click(function () {
 		alert(codedetected)
-		if (codedetected != ""){
+		if (codedetected){
 			$.ajax({
 				method: "POST",
 				url: "/panels/ms_transaction/get",
