@@ -19,7 +19,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    "file-upload-with-preview": "^3.2.9",
+    "file-upload-with-preview": "^4.2.0",
     "gifsicle": "^5.1.0",
     "helmet": "^3.21.2",
     "moment": "^2.24.0",
