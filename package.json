@@ -22,7 +22,7 @@
     "file-upload-with-preview": "^3.2.9",
     "gifsicle": "^5.1.0",
     "helmet": "^3.21.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "multer": "^1.4.1",
     "mysql2": "^1.6.4",
     "passport": "^0.4.0",
